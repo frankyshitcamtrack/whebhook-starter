@@ -29,6 +29,9 @@ app.post("/webhook", (req, res) => {
 
   // Check the Incoming webhook message
   console.log(JSON.stringify(req.body.entry, null, 2));
+ 
+  console.log(JSON.stringify(req.body.entry[0].changes[0].value.messaging_product, null, 2));
+  
 
   // info on WhatsApp text message payload: https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks/payload-examples#text-messages
   if (req.body.object) {
