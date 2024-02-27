@@ -53,7 +53,7 @@ app.post("/webhook", (req, res) => {
         data: {
           messaging_product: "whatsapp",
           to: from,
-          text: { body: "Ack: " + "https://nasa-project-8a7z.onrender.com/v1/planets"},
+          text: { body: "Ack: " + msg_body},
         },
         headers: { "Content-Type": "application/json" },
       });
