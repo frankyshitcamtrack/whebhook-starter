@@ -53,12 +53,12 @@ app.post("/webhook", (req, res) => {
         data: {
           messaging_product: "whatsapp",
           to: from,
-          text: { body: "Ack: "+"https://nasa-project-8a7z.onrender.com/v1/planets" },
+          text: { body: "Ack: "+ msg_body},
         },
         headers: { "Content-Type": "application/json" },
       });
     }
-    res.sendStatus(200);
+    res.json(200);
   } else {
     // Return a '404 Not Found' if event is not from a WhatsApp API
     res.sendStatus(404);
